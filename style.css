@@ -1,0 +1,188 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('assets/images/bg.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    overflow-x:hidden;
+}
+
+.hidden{ display:none; }
+
+/* GENERAL LAYOUT */
+.container, .choice-screen, .memory-screen, .envelope-screen, .final-screen{
+    color:white;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+/* START */
+.container{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.title{
+    font-size:60px;
+    font-family:'Dancing Script', cursive;
+    animation:glow 2s infinite alternate;
+}
+
+.subtitle{ margin:20px; }
+
+.start-btn{
+    padding:12px 30px;
+    border:none;
+    border-radius:50px;
+    background:#ff4f8b;
+    color:white;
+    cursor:pointer;
+}
+
+/* CHOICE */
+.choice-title{
+    font-size:50px;
+    margin-top:100px;
+    font-family:'Dancing Script', cursive;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:30px;
+}
+
+.love-btn,.breakup-btn{
+    padding:12px 25px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+}
+
+.love-btn{ background:#ff4f8b; color:white; }
+.breakup-btn{ background:#222; color:white; }
+
+/* MEMORY */
+.memory-title{
+    font-size:50px;
+    margin:40px;
+}
+
+.memory-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    padding:20px;
+}
+
+.memory-card{
+    background:rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+}
+
+/* ENVELOPE */
+.envelope-box{
+    font-size:80px;
+    margin-top:120px;
+    animation:float 2s infinite;
+}
+
+.open-letter-btn{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:50px;
+    background:#ff4f8b;
+    color:white;
+}
+
+/* FINAL */
+.final-screen{
+    background:rgba(0,0,0,0.9);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.final-title{
+    font-size:45px;
+    font-family:'Dancing Script';
+}
+
+.letter-box{
+    width:80%;
+    max-width:700px;
+    margin-top:20px;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    min-height:200px;
+}
+
+#typed-text{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.final-btn{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    border-radius:50px;
+    background:#ff4f8b;
+    color:white;
+}
+
+/* HEARTS */
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:1;
+}
+
+.heart{
+    position:absolute;
+    bottom:-50px;
+    animation:floatUp linear forwards;
+}
+
+/* ANIMATIONS */
+@keyframes floatUp{
+    from{ transform:translateY(0); opacity:1; }
+    to{ transform:translateY(-120vh); opacity:0; }
+}
+
+@keyframes glow{
+    from{ text-shadow:0 0 10px #ff7eb3; }
+    to{ text-shadow:0 0 30px #ffb6d9; }
+}
+
+@keyframes float{
+    0%{ transform:translateY(0); }
+    50%{ transform:translateY(-10px); }
+    100%{ transform:translateY(0); }
+}
