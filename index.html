@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press To Fix Us 💖</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEARTS -->
+    <div class="hearts"></div>
+
+    <!-- MUSIC -->
+    <audio id="bg-music" loop>
+        <source src="assets/music/music.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- START SCREEN -->
+    <div class="container" id="first-screen">
+        <h1 class="title">PRESS START TO FIX US 💖</h1>
+        <p class="subtitle">Some stories deserve another chance...</p>
+        <button class="start-btn" onclick="startWebsite()">Press Start</button>
+    </div>
+
+    <!-- CHOICE SCREEN -->
+    <div class="choice-screen hidden" id="choice-screen">
+        <h1 class="choice-title">Before we continue...</h1>
+        <p class="choice-text">One question 💖</p>
+
+        <div class="buttons">
+            <button class="love-btn" onclick="chooseLove()">Stay With Me Forever 💖</button>
+            <button class="breakup-btn" onclick="breakupOption()">Breakup 💔</button>
+        </div>
+    </div>
+
+    <!-- MEMORY SCREEN -->
+    <div class="memory-screen hidden" id="memory-screen">
+        <h1 class="memory-title">Our Memories ✨</h1>
+
+        <div class="memory-container">
+            <div class="memory-card">
+                <h2>🌮 Street Food</h2>
+                <p>Every bite felt like happiness.</p>
+            </div>
+
+            <div class="memory-card">
+                <h2>🚗 Long Drives</h2>
+                <p>Peace even in silence.</p>
+            </div>
+
+            <div class="memory-card">
+                <h2>🎶 Car Vibes</h2>
+                <p>Our songs, our chaos 💖</p>
+            </div>
+
+            <div class="memory-card">
+                <h2>🛕 Siddhivinayak</h2>
+                <p>Our peaceful moments together.</p>
+            </div>
+        </div>
+
+        <div style="text-align:center; margin-top:40px;">
+            <button class="start-btn" onclick="goToEnvelope()">I have something for you 💌</button>
+        </div>
+    </div>
+
+    <!-- ENVELOPE SCREEN -->
+    <div class="envelope-screen hidden" id="envelope-screen">
+        <div class="envelope-box">💌</div>
+        <h1 class="envelope-title">I wrote a letter for you...</h1>
+        <button class="open-letter-btn" onclick="openLetter()">Open Letter 💖</button>
+    </div>
+
+    <!-- FINAL SCREEN -->
+    <div class="final-screen hidden" id="final-screen">
+
+        <h1 class="final-title">💌 A letter for you...</h1>
+
+        <div class="letter-box">
+            <p id="typed-text"></p>
+        </div>
+
+        <button class="final-btn">
+            I understand now 💖
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
